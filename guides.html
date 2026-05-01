@@ -5,56 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Гайды | Дарья Омельченко</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="container header-container">
-            <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">Дарья Омельченко</a></div>
+            <a href="index.html" class="logo" aria-label="На главную">
+                <span>Дарья</span>
+                <strong>Омельченко</strong>
+            </a>
             <nav class="nav">
                 <a href="index.html">На главную</a>
             </nav>
         </div>
     </header>
 
-    <section class="section bg-light">
+    <main>
+    <section class="page-hero">
         <div class="container">
-            <h1 class="section-title">Мои гайды и материалы</h1>
-            <p class="text-center" style="margin-bottom: 40px; color: var(--text-light);">Здесь собраны подробные инструкции и руководства для самостоятельного изучения.</p>
-            
-            <div class="services-grid">
-                <!-- Guide 1 -->
-                <div class="service-card">
-                    <div class="image-placeholder" style="height: 200px; margin-bottom: 20px; font-size: 1rem;">Обложка Гайда 1</div>
-                    <h3>Гайд "Здоровая тарелка"</h3>
-                    <p>Как составить рацион на каждый день без подсчета калорий.</p>
-                    <div class="price">990 ₽</div>
-                    <a href="guide.html" class="btn btn-primary">Подробнее</a>
-                </div>
-
-                <!-- Guide 2 -->
-                <div class="service-card">
-                    <div class="image-placeholder" style="height: 200px; margin-bottom: 20px; font-size: 1rem;">Обложка Гайда 2</div>
-                    <h3>Гайд "Жизнь без сахара"</h3>
-                    <p>Пошаговая инструкция, как избавиться от сахарной зависимости за 21 день.</p>
-                    <div class="price">1 490 ₽</div>
-                    <a href="#" class="btn btn-outline" style="opacity: 0.5; cursor: not-allowed;" onclick="event.preventDefault()">Скоро в продаже</a>
-                </div>
-                
-                <!-- Guide 3 -->
-                <div class="service-card">
-                    <div class="image-placeholder" style="height: 200px; margin-bottom: 20px; font-size: 1rem;">Обложка Гайда 3</div>
-                    <h3>Сборник рецептов</h3>
-                    <p>50 быстрых, вкусных и сбалансированных завтраков на каждый день.</p>
-                    <div class="price">1 200 ₽</div>
-                    <a href="#" class="btn btn-outline" style="opacity: 0.5; cursor: not-allowed;" onclick="event.preventDefault()">Скоро в продаже</a>
-                </div>
+            <div class="page-hero-inner">
+                <div class="eyebrow">Библиотека</div>
+                <h1>Гайды для спокойного старта</h1>
+                <p>Практичные материалы, которые помогают собрать рацион, разобраться с привычками и начать менять питание без перегруза.</p>
             </div>
         </div>
     </section>
 
+    <section class="section">
+        <div class="container">
+            <div class="guide-list-grid">
+                <!-- Guide 1 -->
+                <article class="service-card guide-card">
+                    <div class="image-placeholder">Здоровая тарелка</div>
+                    <div class="service-topline">PDF-гайд</div>
+                    <h3>Гайд "Здоровая тарелка"</h3>
+                    <p>Как составить рацион на каждый день без подсчета калорий.</p>
+                    <div class="price">990 ₽</div>
+                    <a href="guide.html" class="btn btn-primary">Подробнее</a>
+                </article>
+
+                <!-- Guide 2 -->
+                <article class="service-card guide-card">
+                    <div class="image-placeholder">Жизнь без сахара</div>
+                    <div class="service-topline">Скоро</div>
+                    <h3>Гайд "Жизнь без сахара"</h3>
+                    <p>Пошаговая инструкция, как избавиться от сахарной зависимости за 21 день.</p>
+                    <div class="price">1 490 ₽</div>
+                    <a href="#" class="btn btn-outline is-disabled" onclick="event.preventDefault()">Скоро в продаже</a>
+                </article>
+                
+                <!-- Guide 3 -->
+                <article class="service-card guide-card">
+                    <div class="image-placeholder">50 завтраков</div>
+                    <div class="service-topline">Скоро</div>
+                    <h3>Сборник рецептов</h3>
+                    <p>50 быстрых, вкусных и сбалансированных завтраков на каждый день.</p>
+                    <div class="price">1 200 ₽</div>
+                    <a href="#" class="btn btn-outline is-disabled" onclick="event.preventDefault()">Скоро в продаже</a>
+                </article>
+            </div>
+        </div>
+    </section>
+    </main>
+
     <footer class="footer">
-        <div class="container text-center">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo footer-logo">
+                    <span>Дарья</span>
+                    <strong>Омельченко</strong>
+                </div>
+                <p>Материалы по питанию, которые легко встроить в обычную жизнь.</p>
+            </div>
             <p class="copyright">&copy; 2026 Дарья Омельченко. Все права защищены.</p>
         </div>
     </footer>

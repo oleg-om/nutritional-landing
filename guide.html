@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Купить гайд | Дарья Омельченко</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="container header-container">
-            <div class="logo"><a href="index.html" style="color: inherit; text-decoration: none;">Дарья Омельченко</a></div>
+            <a href="index.html" class="logo" aria-label="На главную">
+                <span>Дарья</span>
+                <strong>Омельченко</strong>
+            </a>
             <nav class="nav">
                 <a href="index.html">На главную</a>
                 <a href="guides.html">Все гайды</a>
@@ -18,14 +21,15 @@
         </div>
     </header>
 
+    <main>
     <section class="guide-page section">
         <div class="container">
             <div class="guide-layout">
                 <div class="guide-image">
-                    <!-- Placeholder for Guide Cover -->
-                    <div class="image-placeholder guide-cover">Обложка Гайда</div>
+                    <div class="image-placeholder guide-cover">Здоровая тарелка</div>
                 </div>
                 <div class="guide-info">
+                    <div class="eyebrow">PDF-гайд</div>
                     <h1>Гайд "Здоровая тарелка: как составить рацион на каждый день"</h1>
                     <p class="guide-description">Этот гайд — ваша шпаргалка по сбалансированному питанию. Внутри вы найдете:</p>
                     <ul>
@@ -52,6 +56,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Modal for Mock Payment -->
     <div id="payment-modal" class="modal hidden">
@@ -84,7 +89,14 @@
     </div>
 
     <footer class="footer">
-        <div class="container text-center">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo footer-logo">
+                    <span>Дарья</span>
+                    <strong>Омельченко</strong>
+                </div>
+                <p>Нутрициология, которая возвращает опору, энергию и удовольствие от еды.</p>
+            </div>
             <p class="copyright">&copy; 2026 Дарья Омельченко. Все права защищены.</p>
         </div>
     </footer>
