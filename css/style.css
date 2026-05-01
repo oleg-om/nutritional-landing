@@ -380,6 +380,7 @@ p {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     letter-spacing: -0.05em;
     line-height: 1;
+    white-space: nowrap;
 }
 
 .hero-metrics span {
