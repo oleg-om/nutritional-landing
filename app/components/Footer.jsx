@@ -19,7 +19,7 @@ export default function Footer({ compact = false }) {
                         </div>
                     </div>
                 )}
-                <p className="copyright">&copy; 2026 Дарья Омельченко. Все права защищены.</p>
+                <p className="copyright">&copy; 2026 Дарья Омельченко. Все права защищены. ИНН: 910213749765</p>
             </div>
         </footer>
     );

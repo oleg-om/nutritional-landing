@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-export default function GuideBuyButton() {
+export default function GuideBuyButton({ productId }) {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
 
@@ -17,7 +17,7 @@ export default function GuideBuyButton() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    productId: 'healthy-plate-guide',
+                    productId,
                 }),
             });
 

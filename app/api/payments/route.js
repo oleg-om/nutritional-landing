@@ -1,12 +1,6 @@
 import { randomUUID } from 'crypto';
 import { NextResponse } from 'next/server';
-
-const PRODUCTS = {
-    'healthy-plate-guide': {
-        title: 'Гайд "Здоровая тарелка"',
-        amount: '990.00',
-    },
-};
+import { getGuideByProductId } from '../../data/guides';
 
 export async function POST(request) {
     const shopId = process.env.YOOKASSA_SHOP_ID;
@@ -21,9 +15,9 @@ export async function POST(request) {
     }
 
     const body = await request.json().catch(() => ({}));
-    const product = PRODUCTS[body.productId];
+    const product = getGuideByProductId(body.productId);
 
-    if (!product) {
+    if (!product || !product.available) {
         return NextResponse.json({ error: 'Товар не найден' }, { status: 400 });
     }
 

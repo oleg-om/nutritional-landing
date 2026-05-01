@@ -758,6 +758,10 @@ p {
     color: #fffaf2;
 }
 
+.guide-promo-card h2 {
+    margin-bottom: 22px;
+}
+
 .guide-promo-card p {
     max-width: 720px;
     margin-bottom: 0;

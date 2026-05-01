@@ -14,7 +14,7 @@ const nextConfig = {
             },
             {
                 source: '/guide.html',
-                destination: '/guide',
+                destination: '/guides/healthy-plate',
                 permanent: true,
             },
         ];
