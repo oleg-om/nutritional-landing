@@ -15,7 +15,6 @@ export default function Footer({ compact = false }) {
                         <p>Telegram: @dariandme</p>
                         <div className="socials">
                             <a href="https://t.me/dariandme">Telegram</a>
-                            <a href="#">Max</a>
                         </div>
                     </div>
                 )}

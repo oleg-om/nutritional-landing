@@ -301,6 +301,21 @@ p {
     align-items: start;
 }
 
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1fr);
+    gap: 48px 72px;
+    align-items: start;
+}
+
+.about-heading {
+    grid-column: 1 / -1;
+}
+
+.about-heading .section-title {
+    max-width: 1060px;
+}
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -413,6 +428,63 @@ p {
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(251, 246, 236, 0.74));
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(18px);
+}
+
+.hero-photo-card {
+    position: relative;
+    width: min(100%, 420px);
+    aspect-ratio: 0.74;
+    overflow: hidden;
+    border: 12px solid rgba(255, 255, 255, 0.72);
+    border-radius: 46px;
+    background: var(--sand);
+    box-shadow: var(--shadow-soft);
+}
+
+.hero-photo-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 52%, rgba(23, 37, 31, 0.42));
+    pointer-events: none;
+}
+
+.hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.hero-photo-caption {
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+    z-index: 1;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 24px;
+    background: rgba(255, 250, 242, 0.14);
+    color: #fffaf2;
+    backdrop-filter: blur(14px);
+}
+
+.hero-photo-caption strong,
+.hero-photo-caption span {
+    display: block;
+}
+
+.hero-photo-caption strong {
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+.hero-photo-caption span {
+    margin-top: 4px;
+    color: rgba(255, 250, 242, 0.82);
+    font-size: 0.9rem;
+    line-height: 1.35;
 }
 
 .main-card::before {
@@ -559,6 +631,21 @@ p {
 .about-content {
     max-width: 760px;
     font-size: 1.08rem;
+}
+
+.about-portrait-card {
+    width: min(100%, 430px);
+    overflow: hidden;
+    border: 10px solid rgba(255, 255, 255, 0.68);
+    border-radius: 34px;
+    background: var(--sand);
+    box-shadow: var(--shadow-card);
+}
+
+.about-portrait {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .features {
@@ -1093,6 +1180,7 @@ p {
 @media (max-width: 980px) {
     .hero-container,
     .two-column,
+    .about-layout,
     .guide-layout {
         grid-template-columns: 1fr;
     }

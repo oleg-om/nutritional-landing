@@ -1,4 +1,7 @@
+import Image from 'next/image';
 import Link from 'next/link';
+import dariaPortrait from '../assets/image-1.png';
+import dariaHero from '../assets/image-2.png';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -32,36 +35,21 @@ export default function HomePage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="hero-visual" aria-hidden="true">
+                        <div className="hero-visual">
                             <div className="orb orb-one"></div>
                             <div className="orb orb-two"></div>
-                            <div className="nutrition-card main-card">
-                                <span className="card-label">Баланс дня</span>
-                                <div className="plate">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                            <div className="hero-photo-card">
+                                <Image
+                                    src={dariaHero}
+                                    alt="Дарья Омельченко, нутрициолог"
+                                    className="hero-photo"
+                                    priority
+                                    sizes="(max-width: 980px) 80vw, 420px"
+                                />
+                                <div className="hero-photo-caption">
+                                    <strong>Дарья Омельченко</strong>
+                                    <span>нутрициолог, персональный подход к питанию</span>
                                 </div>
-                                <div className="macro-row">
-                                    <span>Белки</span>
-                                    <strong>28%</strong>
-                                </div>
-                                <div className="macro-row">
-                                    <span>Клетчатка</span>
-                                    <strong>34%</strong>
-                                </div>
-                                <div className="macro-row">
-                                    <span>Энергия</span>
-                                    <strong>41%</strong>
-                                </div>
-                            </div>
-                            <div className="floating-card floating-card-top">
-                                <strong>+ сон</strong>
-                                <span>мягкая коррекция режима</span>
-                            </div>
-                            <div className="floating-card floating-card-bottom">
-                                <strong>анализы</strong>
-                                <span>разбор дефицитов и привычек</span>
                             </div>
                         </div>
                     </div>
@@ -77,10 +65,20 @@ export default function HomePage() {
                 </section>
 
                 <section id="about" className="about section">
-                    <div className="container two-column">
-                        <div>
+                    <div className="container about-layout">
+                        <div className="about-heading">
                             <div className="eyebrow">Подход</div>
                             <h2 className="section-title align-left">Не очередная диета, а система, которую реально сохранить</h2>
+                        </div>
+                        <div className="about-media">
+                            <div className="about-portrait-card">
+                                <Image
+                                    src={dariaPortrait}
+                                    alt="Портрет Дарьи Омельченко"
+                                    className="about-portrait"
+                                    sizes="(max-width: 980px) 100vw, 430px"
+                                />
+                            </div>
                         </div>
                         <div className="about-content">
                             <p>Привет! Меня зовут Дарья Омельченко, я нутрициолог. Я работаю с питанием, образом жизни и привычками так, чтобы изменения вписывались в ваш обычный график, семью, работу и любимые продукты.</p>
