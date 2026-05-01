@@ -1,0 +1,26 @@
+{
+  "name": "nutritional-landing",
+  "version": "1.0.0",
+  "description": "Nutritionist landing page with YooKassa checkout",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oleg-om/nutritional-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oleg-om/nutritional-landing/issues"
+  },
+  "homepage": "https://github.com/oleg-om/nutritional-landing#readme",
+  "dependencies": {
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  }
+}
