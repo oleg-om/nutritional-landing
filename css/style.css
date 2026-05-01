@@ -899,7 +899,7 @@ p {
 
 .guide-layout {
     display: grid;
-    grid-template-columns: minmax(300px, 0.85fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.72fr);
     gap: 56px;
     align-items: center;
 }
@@ -910,9 +910,14 @@ p {
 
 .guide-image {
     position: relative;
+    display: flex;
+    width: min(100%, 430px);
+    align-self: start;
+    justify-self: center;
 }
 
 .guide-cover {
+    width: 100%;
     min-height: 540px;
     border: 12px solid rgba(255, 255, 255, 0.68);
     border-radius: 42px;
@@ -929,7 +934,7 @@ p {
 
 .guide-info h1 {
     max-width: none;
-    font-size: clamp(2.35rem, 4.4vw, 4.4rem);
+    font-size: clamp(2.05rem, 3.5vw, 3.55rem);
 }
 
 .guide-description {
