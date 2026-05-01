@@ -52,7 +52,7 @@ export default function HomePage() {
                                 </div>
                                 <div className="macro-row">
                                     <span>Энергия</span>
-                                    <strong>stable</strong>
+                                    <strong>41%</strong>
                                 </div>
                             </div>
                             <div className="floating-card floating-card-top">
