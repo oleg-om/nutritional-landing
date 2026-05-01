@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Nutritionist landing page with YooKassa checkout",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3010",
     "build": "next build",
     "start": "next start"
   },
