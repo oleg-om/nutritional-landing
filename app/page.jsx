@@ -12,7 +12,7 @@ export default function HomePage() {
                         <div className="hero-content">
                             <div className="eyebrow">Нутрициология без диет и хаоса</div>
                             <h1>Питание для энергии и легкости</h1>
-                            <p className="hero-text">Дарья Омельченко помогает бережно перестроить рацион, разобраться с дефицитами и прийти к форме без запретов, марафонов и чувства вины.</p>
+                            <p className="hero-text">Я помогу бережно перестроить рацион, разобраться с дефицитами и прийти к форме без запретов, марафонов и чувства вины.</p>
                             <div className="hero-actions">
                                 <Link href="/#services" className="btn btn-primary">Выбрать программу</Link>
                                 <Link href="/guides" className="btn btn-glass">Смотреть гайды</Link>
