@@ -36,7 +36,7 @@ export default async function GuideDetailPage({ params }) {
 
     return (
         <>
-            <Header simple />
+            <Header simple showAllGuides />
             <main>
                 <section className="guide-page section">
                     <div className="container">

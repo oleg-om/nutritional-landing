@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function Header({ simple = false }) {
+export default function Header({ simple = false, showAllGuides = false }) {
     return (
         <header className="header">
             <div className="container header-container">
@@ -12,11 +12,10 @@ export default function Header({ simple = false }) {
                     {simple ? (
                         <>
                             <Link href="/">На главную</Link>
-                            <Link href="/guides">Все гайды</Link>
+                            {showAllGuides && <Link href="/guides">Все гайды</Link>}
                         </>
                     ) : (
                         <>
-                            <Link href="/#about">Метод</Link>
                             <Link href="/#services">Программы</Link>
                             <Link href="/guides" className="nav-guide">Гайды</Link>
                             <Link href="/#contacts">Контакты</Link>

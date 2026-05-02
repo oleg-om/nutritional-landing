@@ -4,6 +4,36 @@ import dariaPortrait from '../assets/image-1.png';
 import dariaHero from '../assets/image-2.png';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import LeadForm from './components/LeadForm';
+
+const servicePrograms = [
+    {
+        topline: 'Старт',
+        title: 'Разовая консультация',
+        description: 'Подойдет, если нужен профессиональный взгляд на рацион, анализы и первые понятные шаги.',
+        features: [
+            'Анализ дневника питания',
+            'Рекомендации по тарелке и режиму',
+            'План действий на 2 недели',
+        ],
+        price: '5 000 ₽',
+        buttonLabel: 'Записаться',
+    },
+    {
+        topline: 'Глубокая работа',
+        title: 'Месячное сопровождение',
+        description: 'Для тех, кто хочет не просто рекомендации, а устойчивую систему и поддержку в процессе.',
+        features: [
+            'Персональная стратегия питания',
+            'Еженедельные созвоны',
+            'Поддержка и корректировки в мессенджере',
+        ],
+        price: '15 000 ₽',
+        buttonLabel: 'Начать сопровождение',
+        badge: 'популярно',
+        featured: true,
+    },
+];
 
 export default function HomePage() {
     return (
@@ -125,33 +155,7 @@ export default function HomePage() {
                             <div className="eyebrow">Программы</div>
                             <h2 className="section-title">Выберите формат под вашу цель</h2>
                         </div>
-                        <div className="services-grid">
-                            <article className="service-card">
-                                <div className="service-topline">Старт</div>
-                                <h3>Разовая консультация</h3>
-                                <p>Подойдет, если нужен профессиональный взгляд на рацион, анализы и первые понятные шаги.</p>
-                                <ul>
-                                    <li>Анализ дневника питания</li>
-                                    <li>Рекомендации по тарелке и режиму</li>
-                                    <li>План действий на 2 недели</li>
-                                </ul>
-                                <div className="price">5 000 ₽</div>
-                                <a className="btn btn-outline" href="https://t.me/dariandme">Записаться</a>
-                            </article>
-                            <article className="service-card featured">
-                                <div className="service-badge">популярно</div>
-                                <div className="service-topline">Глубокая работа</div>
-                                <h3>Месячное сопровождение</h3>
-                                <p>Для тех, кто хочет не просто рекомендации, а устойчивую систему и поддержку в процессе.</p>
-                                <ul>
-                                    <li>Персональная стратегия питания</li>
-                                    <li>Еженедельные созвоны</li>
-                                    <li>Поддержка и корректировки в мессенджере</li>
-                                </ul>
-                                <div className="price">15 000 ₽</div>
-                                <a className="btn btn-primary" href="https://t.me/dariandme">Начать сопровождение</a>
-                            </article>
-                        </div>
+                        <LeadForm programs={servicePrograms} />
                     </div>
                 </section>
 
