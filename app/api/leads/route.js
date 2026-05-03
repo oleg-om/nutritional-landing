@@ -11,6 +11,16 @@ function escapeHtml(value) {
         .replaceAll('>', '&gt;');
 }
 
+function normalizeTelegramUsername(value) {
+    if (!value) {
+        return '';
+    }
+
+    return value.startsWith('@') || value.startsWith('http://') || value.startsWith('https://')
+        ? value
+        : `@${value}`;
+}
+
 export async function POST(request) {
     const botToken = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_LEAD_CHAT_ID;
@@ -26,7 +36,7 @@ export async function POST(request) {
     const name = cleanValue(body.name);
     const age = cleanValue(body.age);
     const email = cleanValue(body.email);
-    const telegram = cleanValue(body.telegram);
+    const telegram = normalizeTelegramUsername(cleanValue(body.telegram));
     const program = cleanValue(body.program) || 'Не указана';
 
     if (!name || !age) {
